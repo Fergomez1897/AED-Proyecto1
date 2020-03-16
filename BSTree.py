@@ -16,10 +16,10 @@ class Btree:
             self.root = BSTNode(value) 
             return True
         if(value<current):
-                if (not current.left):
-                    current.left= BSTNode(value)
-                    return True
-                return self.addInner(value, current.left)
+            if (not current.left):
+                current.left= BSTNode(value)
+                return True
+            return self.addInner(value, current.left)
         
         if (value>current.value):
             if(not current.right):
@@ -28,3 +28,4 @@ class Btree:
             return self.addInner(value, current.left)
         
         return False 
+                    
